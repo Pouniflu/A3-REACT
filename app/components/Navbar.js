@@ -5,8 +5,12 @@ export default function Navbar() {
     const [user, setUser] = useState(null);
     return (
         <div className={styles.navContainer}>
-            <h3>Corgis</h3>
+            <h3>Chien</h3>
+
             <p>Menu</p>
+
+            <a href="/pageChien"></a>
+
             <div>
                 {   user ? (
                         <button>

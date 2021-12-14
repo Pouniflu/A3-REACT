@@ -1,8 +1,11 @@
-import React from "react"
+import React, { useState, useEffect }from "react"
 import Image from "next/image";
 import styles from '../styles/Card.module.css'
+import { useRouter } from 'next/router'
 
 export default function Card(props) {
+    const [selected, setSelected] = useState(null)
+    const router = useRouter()
 
     return (
         <div className={styles.card}>
@@ -13,7 +16,10 @@ export default function Card(props) {
             src={props.image} alt={props.altImage}/>
             <p>{props.desc}</p>
             <p>{props.age}</p>
-            <button>En savoir plus !</button>
+            <button onClick={() => { 
+                router.push({pathname: '[productname]', query:{productname:props.title}})
+                localStorage.setItem("selected_product", JSON.stringify(props))
+            }}>En savoir plus !</button>
         </div>
     )
 }

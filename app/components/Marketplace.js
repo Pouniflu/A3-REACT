@@ -6,6 +6,7 @@ export default function Marketplace() {
     return (
         <div className={styles.marketcontainer}>
             <h3 style={{gridColumn:'3/3', gridColumnStart:'1', gridColumnEnd:'4', textTransform:'uppercase'}}>Marketplace</h3>
+
             <Card 
             title="Milou" 
             image="https://images.pexels.com/photos/994174/pexels-photo-994174.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
